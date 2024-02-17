@@ -1,0 +1,35 @@
+@startuml MCD
+
+entity User {
+  +userId: int <<PK, AI>>
+  username: varchar
+  password: varchar
+  email: varchar
+  birthday: date
+  image: varchar
+  admin: boolean
+}
+
+entity Movie { 
+  +movieId: int <<PK, AI>>
+  name: varchar
+  director: varchar
+  average: double
+  releaseYear: int
+  image: varchar
+}
+
+entity Review {
+  +reviewId: int <<PK>>
+  movieId: int <<FK>>
+  userId: int <<FK>>
+  mark: int
+  comment: String
+  date: Date
+}
+
+Movie "1" -- "0...*" Review : holds
+Review "0...*" -- "1" User : gives
+
+@enduml
+

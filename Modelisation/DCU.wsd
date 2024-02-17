@@ -1,0 +1,114 @@
+@startuml DCU
+left to right direction
+
+ actor Utilisateur as user
+ actor Administrateur as admin
+
+rectangle "Système " {
+    usecase "Gestion du compte " as Account
+    usecase "Gestion des films" as exploreMovie
+}
+
+rectangle {
+    usecase "Création de compte " as Create_account
+    usecase "Modification de compte" as Modif_account
+    usecase "Suppression de compte" as Delete_account
+}
+
+rectangle {
+    usecase "Gestion des commentaires " as Comment
+    usecase "Gestion des notes" as Grade
+}
+
+rectangle {
+    usecase "Création d'une note" as Create_grade
+    usecase "Suppression d'une note " as Delete_grade
+    usecase "Modification d'une note" as Modif_grade
+}
+
+rectangle {
+    usecase "Création d'un commentaire " as Create_comment
+    usecase "Modification d'un commentaire" as Modif_comment
+    usecase "Suppression d'un commentaire" as Delete_comment
+
+}
+
+rectangle {
+    usecase "Gestion des avis" as Notice
+    usecase "Recherche de film " as searchMovie
+}
+
+rectangle {
+    usecase "Modification de l'avatar" as avatar
+    usecase "Modification du pseudo" as pseudo
+    usecase "Modification de la date de naissance " as dateNaissance
+    usecase "Modification de l'adresse mail " as mail
+
+}
+
+user --> Account
+user --> exploreMovie
+
+exploreMovie --> searchMovie
+exploreMovie --> Notice
+
+Account --> Create_account
+Account --> Modif_account
+Account --> Delete_account
+
+Modif_account --> avatar
+Modif_account --> pseudo
+Modif_account --> dateNaissance
+Modif_account --> mail
+
+Notice --> Comment
+Notice --> Grade
+
+Comment --> Create_comment
+Comment --> Modif_comment
+Comment --> Delete_comment
+
+Grade --> Create_grade
+Grade --> Modif_grade
+Grade --> Delete_grade
+
+
+
+
+rectangle "Système" { 
+    usecase "Gestion des comptes " as Account_admin
+    usecase "Gestion des films" as Film_admin
+    usecase "Ajouter un film" as addMovie
+}
+
+rectangle { 
+    usecase "Suppression de compte  " as Suppresion_account_admin
+    usecase "Visualisation des avis du compte " as WatchNotice_admin
+    usecase "Ajouter un film" as addMovie
+}
+
+rectangle {
+    usecase "Visualisation des avis du film " as Notice_admin
+}
+
+rectangle {
+    usecase "Suppression de l'avis " as Notice_delete_admin
+}
+
+rectangle {
+    usecase "Suppression de l'avis " as Suppresion_notice_admin
+}
+
+admin --> Account_admin
+admin --> Film_admin
+admin --> addMovie
+
+Account_admin --> Suppresion_account_admin
+Account_admin --> WatchNotice_admin
+
+WatchNotice_admin --> Suppresion_notice_admin
+
+Film_admin --> Notice_admin
+
+Notice_admin --> Notice_delete_admin
+@enduml

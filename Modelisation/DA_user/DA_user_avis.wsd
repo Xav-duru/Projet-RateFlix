@@ -1,0 +1,41 @@
+@startuml DA utilisateur avis
+|Utilisateur|
+start
+if (Action choisie = "Gestion de ses avis") then (oui)
+    :Visualiser l'ensemble des avis postés par l'utilisateur;
+    if (Action choisie = "Gestion des commentaires ") then (oui)
+
+    elseif (Action choisie = "Gestion des notes") then (oui)
+    else (non)
+    endif
+  else (non)
+endif
+stop 
+
+start 
+if (Action choisie = "Gestion des commentaires ") then (oui)
+        if (Action choisie = "créer un commentaire") then (oui)
+            :Création d'un commentaire;
+        elseif (Action choisie = "Supprimer un commentaire") then (oui)
+            :Suppression d'un commentaire;
+        elseif (Action choisie = "Modifier un commentaire") then (oui)
+            :Modification d'un commentaire;
+        else(non)
+        endif
+else(non)
+endif
+stop 
+
+start 
+if (Action choisie = "Gestion des notes") then (oui)
+        if (Action choisie = "Creér une note") then (oui)
+            :Création d'une note;
+        elseif (Action choisie = "Supprimer une note") then (oui)
+            :Suppression d'une note;
+        elseif (Action choisie = "Modifier une note") then (oui)
+            :Modification d'une note;
+            else(non)
+        endif
+else(non)    
+endif
+stop

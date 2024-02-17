@@ -1,0 +1,75 @@
+@startuml
+class Utilisateur {
+  -user_id: String
+  -username : String
+  -password : String
+  -email: String
+  -avatar: Image
+  -birthDate: Date
+  +consulterAvis()
+  +rechercherFilm()
+}
+
+class Administrateur {
+  +ajouterFilm()
+  +supprimerCompte()
+  +visualiserAvisCompte()
+}
+
+class GestionCompte {
+  +creerCompte()
+  +modifierCompte()
+  +supprimerCompte()
+}
+
+class GestionAvis {
+  +gererCommentaires()
+  +gererNotes()
+}
+
+class GestionCommentaires {
+  -contenu: String
+  -dateCreation: Date
+  +creerCommentaire()
+  +modifierCommentaire()
+  +supprimerCommentaire()
+}
+
+class GestionNotes {
+  -valeur: int
+  -dateCreation: Date
+  +creerNote()
+  +modifierNote()
+  +supprimerNote()
+}
+
+class GestionFilms {
+  +explorerFilms()
+  +rechercherFilm()
+  +ajouterFilm()
+  +visualiserAvisFilm()
+}
+
+class GestionAvisFilm {
+  +visualiserAvisFilm()
+  +supprimerAvisFilm()
+}
+
+Utilisateur --|> GestionCompte
+Utilisateur --|> GestionFilms
+Utilisateur --|> GestionAvis
+
+GestionCompte --|> GestionAvis
+GestionAvis --|> GestionCommentaires
+GestionAvis --|> GestionNotes
+
+GestionCommentaires --|> GestionFilms
+GestionNotes --|> GestionFilms
+
+Administrateur --|> GestionCompte
+Administrateur --|> GestionFilms
+Administrateur --|> GestionAvisFilm
+
+GestionAvisFilm --|> GestionAvis
+GestionAvisFilm --|> GestionFilms
+@enduml

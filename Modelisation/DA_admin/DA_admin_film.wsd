@@ -1,0 +1,35 @@
+@startuml DA Administrateur "gestion des films"
+|Administrateur|
+start
+:Visualisation de films suggérés;
+
+if (Action choisie = "Recherche d'un film") then (oui)
+  :Visualiser les détails et les avis du film;
+  :Traitement spécifique à la recherche;
+  if (Action choisie = "Supprimer un avis") then (oui)
+    :Suppression de l'avis;
+  elseif (Action choisie = "Supprimer du film") then (oui)
+    :Suppression du film;
+  else (non)
+  endif
+else (non)
+endif
+stop
+
+|Administrateur|
+start
+:Visualisation de films suggérés;
+
+if (Action choisie = "Cliquer sur un des films suggérés") then (oui)
+  :Visualiser les détails et les avis du film;
+  :Traitement spécifique au clic;
+  if (Action choisie = "Supprimer un avis") then (oui)
+    :Suppression de l'avis;
+  elseif (Action choisie = "Supprimer du film") then (oui)
+    :Suppression du film;
+  else (non)
+  endif
+else (non)
+endif
+stop
+@enduml

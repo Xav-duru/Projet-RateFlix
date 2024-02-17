@@ -1,0 +1,36 @@
+@startuml MLD
+
+hide circle
+
+entity User {
+  +userId: int <<PK, AI>>
+  username: varchar
+  password: varchar
+  email: varchar
+  birthday: date
+  image: varchar
+  admin: boolean
+}
+
+entity Movie {
+  +movieId: int <<PK, AI>>
+  name: varchar
+  director: varchar
+  average: double
+  releaseYear: int
+  image: varchar
+}
+
+entity Review {
+  +reviewId: int <<PK, AI>>
+  movieId: int <<FK>>
+  userId: int <<FK>>
+  mark:int
+  comment: varchar
+  date: date
+}
+
+Review --> User 
+Review --> Movie 
+
+@enduml

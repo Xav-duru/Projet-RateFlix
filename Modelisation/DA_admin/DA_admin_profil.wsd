@@ -1,0 +1,35 @@
+@startuml DA Administrateur "gestion des profils"
+|Administrateur|
+start
+:Visualisation d'une liste des profils;
+
+if (Action choisie = "Recherche d'un pseudo") then (oui)
+  :Visualiser les avis du profil;
+  :Traitement spécifique à la recherche;
+  if (Action choisie = "Supprimer un avis") then (oui)
+    :Suppression de l'avis;
+  elseif (Action choisie = "Supprimer du profil") then (oui)
+    :Suppression du profil;
+  else (non)
+  endif
+else (non)
+endif
+stop
+
+|Administrateur|
+start
+:Visualisation d'une liste des profils;
+
+if (Action choisie = "Recherche d'un pseudo") then (oui)
+  :Visualiser les avis du profil;
+  :Traitement spécifique à la recherche;
+  if (Action choisie = "Supprimer un avis") then (oui)
+    :Suppression de l'avis;
+  elseif (Action choisie = "Supprimer du profil") then (oui)
+    :Suppression du profil;
+  else (non)
+  endif
+else (non)
+endif
+stop
+@enduml

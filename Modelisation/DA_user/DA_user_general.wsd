@@ -1,0 +1,19 @@
+@startuml DA utilisateur general
+|Utilisateur|
+start
+:Créer un compte;
+while (Compte créé ?) is (Non)
+  :Saisir nom d'utilisateur, mot de passe, et email;
+endwhile (Oui)
+|Utilisateur|
+:page par défaut;
+  if (Action choisie = "Consultation des films ") then (oui)
+  :Visualiser des films suggérés; 
+  elseif (Action choisie = "Gestion de son compte") then (oui)
+    :Visualiser le profil de l'utilisateur;
+  elseif (Action choisie = "Gestion de ses avis") then (oui)
+    :Visualiser l'ensemble des avis postés de l'utilisateur;
+  else (non)
+endif
+stop
+@enduml

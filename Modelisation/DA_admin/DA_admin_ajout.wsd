@@ -1,0 +1,33 @@
+@startuml DA Administrateur "Ajouter film"
+|Administrateur|
+start
+:Visualisation de films suggérés;
+
+if (Action choisie = "Cliquer pour ajouter un film à la liste") then (oui)
+  :Affichage de la page pour ajouter un film;
+  
+  if (Titre du film renseigné ?) then (oui) 
+    :Ajout du titre au film;
+    
+    if (Image du film ajoutée ?) then (oui)
+      :Ajout du film avec son titre et son image;
+      if (Réalisateur du film ajoutée ?) then (oui)
+      :Ajout du film avec son titre, son image et son réalisateur;
+      else(non)
+      endif
+      if (Date du film ajoutée ?) then (oui)
+      :Ajout du film avec son titre, son image, son réalisateur et sa date;
+      else(non)
+      endif
+    else (non)
+      :Ajout impossible du film (Image manquante);
+    endif
+    
+  else (non)
+    :Ajout impossible du film (Titre manquant);
+  endif
+else (non)
+endif
+
+stop
+@enduml

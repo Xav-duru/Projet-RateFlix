@@ -1,0 +1,25 @@
+@startuml DA général de l'Administrateur
+|Administrateur|
+start
+while (Compte connécté ?) is (Non)
+  :Saisir nom d'utilisateur et mot de passe;
+endwhile (Oui)
+|Administrateur|
+:pas par defaut;
+if (Action choisie = "Gestion des films ") then (oui)
+  :Visualiser des films suggérés;
+    if (Action choisie = "Rechercher un film ") then (oui)
+    :Visualiser les détails et les avis du film;
+    elseif (Action choisie = "Cliquer sur un des films suggérés") then (oui)
+    :Visualiser les détails et les avis du film;
+  endif
+  elseif (Action choisie = "Gestion de profil") then (oui)
+    :Visualiser une liste des profils;
+  elseif (Action choisie = "Ajouter un film à la liste") then (oui)
+    :Affichage de la page pour ajouter un film;
+  else (non)
+  endif
+
+
+stop
+@enduml

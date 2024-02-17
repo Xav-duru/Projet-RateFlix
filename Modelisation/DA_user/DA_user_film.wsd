@@ -1,0 +1,14 @@
+@startuml DA utilisateur film
+|Utilisateur|
+start
+if (Action choisie = "Consultation des films ") then (oui)
+  :Visualiser des films suggérés;
+    if (Action choisie = "Rechercher un film ") then (oui)
+    :Visualiser les détails et les avis du film;
+    elseif (Action choisie = "Cliquer sur un des films suggérés") then (oui)
+    :Visualiser les détails et les avis du film;
+    else(non)
+    endif
+endif
+stop
+@enduml

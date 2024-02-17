@@ -1,0 +1,16 @@
+@startuml DA utilisateur compte
+|Utilisateur|
+start
+if (Action choisie = "Gestion de son compte") then (oui)
+  :Visualiser de son profil;
+    if (Action choisie = "Modification de son pseudo ") then (oui)
+    :Changer le pseudo;
+    elseif (Action choisie = "Ajout/Modification de son avatar") then (oui)
+    :Ajouter/Changer son avatar;
+    elseif (Action choisie = "Ajout/Modification de son adresse mail") then (oui)
+    :Ajouter/Changer son adresse mail;
+    else(non)
+    endif
+endif
+stop
+@enduml
