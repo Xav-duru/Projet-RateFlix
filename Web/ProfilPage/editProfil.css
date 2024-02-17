@@ -1,0 +1,266 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.profil-edit {
+    background-color: #ffffff;
+    width: 100vw; 
+    height: 100vh; 
+}
+
+.profil-edit .header {
+    position: relative;
+    width: 100vw;
+    height: 150px;
+    background-color: #000000;
+}
+
+.profil-edit .text-wrapper-2 {
+    text-align: center;
+    padding-top: 20px;
+    font-family: Impact, fantasy;    
+    font-weight: 400;
+    color: #f04747;
+    font-size: 90px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.profil-edit .user-cicrle-duotone {
+    position: absolute;
+    height: 90px;
+    width: 90px;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    border-radius: 50%; 
+    object-fit: cover;
+}
+
+.profil-edit .name-user {
+    position: absolute;
+    top: 40px;
+    right: 150px;
+    font-family: "Roboto-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 25px;
+    letter-spacing: 0;
+    line-height: 18.3px;
+    cursor: pointer;
+}
+
+.profil-edit .deco {
+    position: absolute;
+    height: 20px;
+    width: auto;
+    top: 70%; 
+    right: 10%; 
+    background-color: #f04747; 
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.deco:hover {
+    background-color: #a60606;
+}
+
+
+.profil-edit .user-cicrle-2 {
+    height: 150px; 
+    width: 150px;
+    margin: 10px auto;
+    border-radius: 50%; 
+    object-fit: cover;
+}
+
+.profil-edit .icon {
+    width: 40px;
+    height: 40px;
+    padding-right: 20px;
+}
+
+.profil-edit .content-profil {
+    flex-direction: column;
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    flex: 1;
+    align-items: center; 
+    justify-content: center; 
+}
+
+.profil-edit .text {
+    position: relative;
+    align-self: stretch;
+    font-family: "Roboto-Medium", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 22.3px;
+    letter-spacing: 0;
+    line-height: 0;
+}
+
+.profil-edit .p {
+    top: 73px;
+    font-family: "SB Sans Display-Semibold", Helvetica;
+    color: #000000;
+    font-size: 12.1px;
+    line-height: 15.7px;
+    position: absolute;
+    left: 89px;
+    font-weight: 400;
+    letter-spacing: 0;
+}
+
+.profil-edit .edit-icon img {
+    width: 100%; 
+    height: auto;
+}
+
+
+.profil-edit .container {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    flex : 1
+}
+
+.profil-edit .sidebar {
+    position: relative;
+    height: 100vw;
+    width: 20%; 
+    background-color: black;
+    padding: 20px;
+}
+
+.profil-edit .icon-button {
+    background-color: #333; 
+    color: #fff; 
+    border: none;
+    padding: 10px 20px; 
+    border-radius: 8px; 
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    height: 40px;
+    width: 250px; 
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+.icon-button:hover {
+    background-color: #555; 
+}
+
+.icon-button .icon {
+    width: 20px; 
+    height: 20px;
+    margin-right: 8px; 
+}
+
+.profil-edit .form {
+    background-color: #ffffff;
+    text-align: center;
+    width: 526px;
+    height: 150px; 
+}
+
+.profil-edit .formImage {
+    background-color: #ffffff;
+    width: 526px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.profil-edit .overlap {
+    width: 526px;
+    height: 95px;
+    border-radius: 20px;
+    margin: 0 auto; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+}
+
+.profil-edit .overlap input{
+    margin-right: 10px;
+}
+
+.profil-edit .overlap-2 {
+    width: 526px;
+    height: 45px;
+    border-radius: 20px;
+    margin: 0 auto; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+}
+
+
+.profil-edit .input-field {
+    width: 700px;
+    height: 95px;
+    background-color: #d9d9d9;
+    border: 1px solid #d9d9d9;
+    border-radius: 20px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    font-family: "Roboto-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-bottom: 10px;
+
+}
+
+.profil-edit .image-profil {
+    height: 150px; 
+    width: auto; 
+    margin: 10px;
+    border-radius: 50%; 
+    object-fit: cover;
+    float: center;
+}
+
+.profil-edit .login-button {
+    display: inline-block;
+    width: 250px;
+    height: 95px;
+    background-color: #36c6f3;
+    border: none;
+    border-radius: 20px;
+    color: #ffffff;
+    font-size: 25px;
+    cursor: pointer;
+    font-family: "Roboto-SemiBold", Helvetica;
+    margin-top: 10px;  
+    transition: background-color 0.3s ease-in-out;
+}
+
+.profil-edit .login-button:hover {
+    background-color: #0056b3;
+}
