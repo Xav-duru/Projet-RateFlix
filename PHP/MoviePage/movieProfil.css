@@ -1,0 +1,258 @@
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+}
+
+.movie-page {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+}
+
+
+.movie-page .frame-2 {
+    width: 40px;
+    height: auto;
+    display: inline-flex;
+    align-items: flex-start;
+    position: relative;
+    flex: 0 0 auto;
+}
+
+.movie-page .header {
+    position: relative;
+    width: 100vw;
+    height: 150px;
+    background-color: #000000;
+}
+
+.movie-page .text-wrapper-2 {
+    text-align: center;
+    padding-top: 20px;
+    font-family: Impact, fantasy;    
+    font-weight: 400;
+    color: #f04747;
+    font-size: 90px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.deco {
+    position: absolute;
+    height: 20px;
+    width: auto;
+    top: 70%; 
+    right: 10%; 
+    background-color: #f04747;
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.deco:hover {
+    background-color: #a60606;
+}
+
+.movie-page .half {
+    width: calc(50% - 20px); 
+    box-sizing: border-box;
+    margin: 10px; 
+    background-color: #ffffff;
+    overflow: hidden;
+    position: relative;
+}
+
+.movie-page .rectangle {
+    width: 20%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.movie-page .text-wrapper-5 {
+    font-family: "Roboto-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.movie-page .director {
+    font-family: "Roboto-Medium", Helvetica;
+    font-weight: 500;
+    font-weight: bold;
+    color: #000000;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.movie-page .p {
+    font-family: "Roboto-Medium", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: justify; 
+}
+
+.movie-page .frame {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 10px;
+    background-color: #ebeaea;
+    width: 100 px;
+}
+
+.movie-page .text-wrapper {
+    font-family: "Montserrat-Regular", Helvetica;
+    color: #000000;
+    font-size: 16px;
+}
+
+.movie-page .user-circle-duotone {
+    position: absolute;
+    height: 90px;
+    width: 90px;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    border-radius: 50%; 
+    object-fit: cover;
+}
+
+
+.movie-page .name-user {
+    position: absolute;
+    top: 40px;
+    right: 150px;
+    font-family: "Roboto-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 25px;
+    letter-spacing: 0;
+    line-height: 18.3px;
+    cursor: pointer;
+}
+
+.add-review {
+    margin-top: 20px;
+}
+
+.add-review label {
+    display: block;
+    margin-bottom: 5px;
+    font-family: "Montserrat-Regular", Helvetica;
+    color: #000000;
+    
+}
+
+.add-review input[type="text"],
+.add-review select {
+    width: 10%;
+    height: auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.add-review textarea {
+    width: 90%;
+    height: 100px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-family: "Montserrat-Regular", Helvetica;
+    color: #000000;
+}
+
+.add-review button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-review button:hover {
+    background-color: #0056b3;
+}
+
+
+.add-review h2 {
+    font-family: "Roboto-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+
+.advices {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px; 
+}
+
+.advices text {
+    font-family: "Montserrat-Regular", Helvetica;
+    color: #000000;
+}
+
+.advices .review {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.advices h2 {
+    font-family: "Roboto-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.reviews-container { 
+    background-color: #ebeaea; 
+    padding: 20px; 
+    margin: 20px; 
+    border-radius: 10px; }
+
+.reviews-container .username {
+    font-family: "Montserrat-Regular", Helvetica;
+    color: #000000;
+    font-weight: bold;
+}
+
+
+.average-rating {
+    font-size: 36px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; 
+}
+
+.average-rating::before {
+    content: '\2605';
+    font-size: 40px;
+    margin-right: 10px;
+    color: gold;
+}
+

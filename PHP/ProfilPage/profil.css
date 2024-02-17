@@ -1,0 +1,91 @@
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profil-page {
+    background-color: #ffffff;
+    /*display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;*/
+    width: 100vw; /* Utilisation de la largeur de la vue du navigateur */
+    height: 100vh; /* Utilisation de la hauteur de la vue du navigateur */
+}
+
+
+.profil-page .header {
+    position: relative;
+    width: 100vw;
+    height: 150px;
+    background-color: #000000;
+}
+
+.profil-page .overlap-group {
+    position: relative;
+    width: 1440px;
+}
+
+.profil-page .text-wrapper-2 {
+    text-align: center;
+    padding-top: 20px;
+    font-family: "Alfa Slab One-Regular", Helvetica;
+    font-weight: 400;
+    color: #f04747;
+    font-size: 90px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+
+
+.profil-page .name-user {
+    position: absolute;
+    top: 40px;
+    right: 150px;
+    font-family: "Roboto-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 25px;
+    letter-spacing: 0;
+    line-height: 18.3px;
+    cursor: pointer;
+}
+
+.profil-page .deco {
+    position: absolute;
+    height: 30px;
+    width: auto;
+    top: 30px;
+    right: 250px;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.profil-page .profil-container {
+    padding-top: 40px;
+    text-align: center;
+    align-items: center;
+    width: auto;
+    object-fit: cover;
+}
+
+.profil-page img {
+    border-radius: 50%; /* Rend la photo en forme de cercle */
+    width: 300px; /* Ajustez la largeur selon vos besoins */
+    height: auto;
+
+}
+
+.profil-page .profil-info {
+    
+    font-family: "Roboto-Medium", Helvetica;
+    font-weight: 500;
+    color: #f04747;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: 18.3px;
+}
